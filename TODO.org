@@ -3,3 +3,7 @@
 * TODO Write a zig build system for GLFW
 * TODO Add GLFW as a dependency (zon)
 * TODO Avoid using paths relative to source files (instead of paths relative to root) in [[./.clangd][.clangd]]
+- Link to an active issue: https://github.com/clangd/clangd/issues/1038
+- [ ] Workaround: Use shell script to generate your =.clangd=
+  =-I${project_dir}/path=
+- [ ] Check viability of =compile_commands.json=

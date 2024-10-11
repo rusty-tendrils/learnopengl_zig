@@ -16,6 +16,7 @@ const cxxflags = cflags ++ [_][]const u8{
 pub fn build(b: *std.Build) void {
     const targets = [_]Target{
         .{ .name = "hello_window", .src = "src/1.getting_started/1.hello_window/main.cpp" },
+        .{ .name = "hello_triangle", .src = "src/1.getting_started/2.hello_triangle/main.cpp" },
     };
 
     for (targets) |target| {
