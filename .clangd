@@ -1,0 +1,38 @@
+CompileFlags:
+  Add: 
+    - "-Wall"
+    - "-Wextra"
+    - "-Werror=return-type"
+    - "-std=c99"
+    - "-std=c++17"
+    - "-fno-exceptions"
+    - "-I../../../include"
+    - "-L../../../lib"
+    - "-lglfw3"
+    - "-lGL"
+    - "-lX11"
+    - "-lpthread"
+    - "-lXrandr"
+    - "-lXi"
+    - "-ldl"
+
+Index:
+  Background: Build
+
+Diagnostics:
+  UnusedIncludes: Strict
+  ClangTidy:
+    Add: 
+      - modernize*
+      - performance*
+      - readability*
+    Remove:
+      - modernize-use-trailing-return-type
+
+InlayHints:
+  Enabled: Yes
+  ParameterNames: Yes
+  DeducedTypes: Yes
+
+Style:
+  FullyQualifiedNamespaces: No

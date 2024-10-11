@@ -1,0 +1,5 @@
+#+title: Todo
+
+* TODO Write a zig build system for GLFW
+* TODO Add GLFW as a dependency (zon)
+* TODO Avoid using paths relative to source files (instead of paths relative to root) in [[./.clangd][.clangd]]
