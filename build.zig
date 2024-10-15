@@ -22,6 +22,40 @@ pub fn build(b: *std.Build) void {
     for (targets) |target| {
         target.build(b);
     }
+
+    // Zig build
+    {
+        const exe = b.addExecutable(.{
+            .name = "zig_build",
+            .root_source_file = b.path("src/main.zig"),
+            .target = b.host,
+        });
+
+        // Includes
+        exe.addIncludePath(b.path("include"));
+
+        // Sources
+        exe.addCSourceFile(.{
+            .file = b.path("src/glad.c"),
+            .flags = &cflags,
+        });
+
+        // Libraries
+        exe.addLibraryPath(b.path("lib"));
+
+        exe.linkLibC();
+        exe.linkLibCpp();
+
+        exe.linkSystemLibrary("glfw3");
+        exe.linkSystemLibrary("GL");
+        exe.linkSystemLibrary("X11");
+        exe.linkSystemLibrary("pthread");
+        exe.linkSystemLibrary("Xrandr");
+        exe.linkSystemLibrary("Xi");
+        exe.linkSystemLibrary("dl");
+
+        b.installArtifact(exe);
+    }
 }
 
 const Target = struct {
