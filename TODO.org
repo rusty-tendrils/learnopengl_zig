@@ -7,5 +7,9 @@
 - [ ] Workaround: Use shell script to generate your =.clangd=
   =-I${project_dir}/path=
 - [ ] Check viability of =compile_commands.json=
-* TODO Error handling for shader compile
+* HOLD Error handling for shader compile
 Currently, it just segfaults when I try to get InfoLog for shader compile errors.
+- This is happening because of libgallium not having debug symbols. (?)
+- [ ] But why does it work with C++?
+* HOLD Follow ups with zig (in source code)
+On hold till json config for clangd is a feature for zig build
