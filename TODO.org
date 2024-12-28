@@ -7,6 +7,8 @@
 - [ ] Workaround: Use shell script to generate your =.clangd=
   =-I${project_dir}/path=
 - [ ] Check viability of =compile_commands.json=
+* TODO What's pkg-config?
+* TODO clang-tools not working with nix
 * HOLD Error handling for shader compile
 Currently, it just segfaults when I try to get InfoLog for shader compile errors.
 - This is happening because of libgallium not having debug symbols. (?)

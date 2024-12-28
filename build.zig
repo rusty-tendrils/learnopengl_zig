@@ -48,10 +48,10 @@ pub fn build(b: *std.Build) void {
 
         exe.linkSystemLibrary("glfw3");
         exe.linkSystemLibrary("GL");
-        exe.linkSystemLibrary("X11");
+        // exe.linkSystemLibrary("X11");
         exe.linkSystemLibrary("pthread");
-        exe.linkSystemLibrary("Xrandr");
-        exe.linkSystemLibrary("Xi");
+        // exe.linkSystemLibrary("Xrandr");
+        // exe.linkSystemLibrary("Xi");
         exe.linkSystemLibrary("dl");
 
         b.installArtifact(exe);
@@ -89,10 +89,10 @@ const Target = struct {
 
         exe.linkSystemLibrary("glfw3");
         exe.linkSystemLibrary("GL");
-        exe.linkSystemLibrary("X11");
+        // exe.linkSystemLibrary("X11");
         exe.linkSystemLibrary("pthread");
-        exe.linkSystemLibrary("Xrandr");
-        exe.linkSystemLibrary("Xi");
+        // exe.linkSystemLibrary("Xrandr");
+        // exe.linkSystemLibrary("Xi");
         exe.linkSystemLibrary("dl");
 
         b.installArtifact(exe);
